@@ -8,9 +8,19 @@ minetest.register_tool("portability:crafting_table", {
     description = "Portable Crafting Table",
     inventory_image = "portability_crafting_table.png",
     on_place = function(itemstack, player, pointed_thing)
+		-- Use pointed node's on_rightclick function first, if present
+        local new_stack = mcl_util.call_on_rightclick(itemstack, player, pointed_thing)
+		if new_stack then
+			return new_stack
+		end
         mcl_crafting_table.show_crafting_form(player)
     end,
     on_secondary_use = function(itemstack, player, pointed_thing)
+		-- Use pointed node's on_rightclick function first, if present
+        local new_stack = mcl_util.call_on_rightclick(itemstack, player, pointed_thing)
+		if new_stack then
+			return new_stack
+		end
         mcl_crafting_table.show_crafting_form(player)
     end
 })
@@ -66,10 +76,20 @@ minetest.register_tool("portability:ender_chest", {
     description = "Portable Ender Chest",
     inventory_image = ender_chest_texture,
     on_place = function(itemstack, player, pointed_thing)
+		-- Use pointed node's on_rightclick function first, if present
+        local new_stack = mcl_util.call_on_rightclick(itemstack, player, pointed_thing)
+		if new_stack then
+			return new_stack
+		end
         minetest.sound_play("ender_chest_open", {to_player = player:get_player_name()})
         minetest.show_formspec(player:get_player_name(), "portability:ender_chest_"..player:get_player_name(), formspec_ender_chest)
     end,
     on_secondary_use = function(itemstack, player, pointed_thing)
+		-- Use pointed node's on_rightclick function first, if present
+        local new_stack = mcl_util.call_on_rightclick(itemstack, player, pointed_thing)
+		if new_stack then
+			return new_stack
+		end
         minetest.sound_play("ender_chest_open", {to_player = player:get_player_name()})
         minetest.show_formspec(player:get_player_name(), "portability:ender_chest_"..player:get_player_name(), formspec_ender_chest)
     end
@@ -99,9 +119,19 @@ for i = 0,15 do
         inventory_image = "portability_enchanting_table.png",
         enchanting_level = i,
         on_place = function(itemstack, player, pointed_thing)
+            -- Use pointed node's on_rightclick function first, if present
+            local new_stack = mcl_util.call_on_rightclick(itemstack, player, pointed_thing)
+            if new_stack then
+                return new_stack
+            end
             show_enchanting(player, i)
         end,
         on_secondary_use = function(itemstack, player, pointed_thing)
+            -- Use pointed node's on_rightclick function first, if present
+            local new_stack = mcl_util.call_on_rightclick(itemstack, player, pointed_thing)
+            if new_stack then
+                return new_stack
+            end
             show_enchanting(player, i)
         end
     })

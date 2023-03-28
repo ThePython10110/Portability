@@ -38,3 +38,4 @@ This makes it so that if the player is holding a portable ender chest, it will s
 ![Crafting Table Recipe](screenshots/crafting_table_recipe.png)
 ![Ender Chest Recipe](screenshots/ender_chest_recipe.png)
 ![Portable Enchanting Table](screenshots/enchanting_table.png)
+![Comparison](screenshots/comparison.png)
