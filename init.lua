@@ -6,7 +6,7 @@ local itemslot_bg = mcl_formspec.get_itemslot_bg
 
 minetest.register_tool("portability:crafting_table", {
     description = "Portable Crafting Table",
-    inventory_image = "crafting_workbench_top.png",
+    inventory_image = "portability_crafting_table.png",
     on_place = function(itemstack, player, pointed_thing)
         mcl_crafting_table.show_crafting_form(player)
     end,
@@ -37,9 +37,9 @@ if (
 	it_is_christmas = true
 end
 
-local ender_chest_texture = {"mcl_chests_ender.png"}
+local ender_chest_texture = {"portability_ender_chest.png"}
 if it_is_christmas then
-    ender_chest_texture = {"mcl_chests_ender_present.png"}
+    ender_chest_texture = {"portability_ender_chest_christmas.png"}
 end
 
 local formspec_ender_chest = "size[9,8.75]"..
@@ -57,7 +57,7 @@ local formspec_ender_chest = "size[9,8.75]"..
 minetest.register_on_player_receive_fields(function(player, formname, fields)
     if formname:find("portability:ender_chest") == 1 then
         if fields.quit then
-            minetest.sound_play("mcl_chests_enderchest_close.ogg", {to_player = player:get_player_name()})
+            minetest.sound_play("mcl_chests_enderchest_close", {to_player = player:get_player_name()})
         end
     end
 end)
@@ -66,7 +66,7 @@ minetest.register_tool("portability:ender_chest", {
     description = "Portable Ender Chest",
     inventory_image = ender_chest_texture,
     on_place = function(itemstack, player, pointed_thing)
-        minetest.sound_play("mcl_chests_enderchest_open.ogg", {to_player = player:get_player_name()})
+        minetest.sound_play("mcl_chests_enderchest_open", {to_player = player:get_player_name()})
         minetest.show_formspec(player:get_player_name(), "portability:ender_chest_"..player:get_player_name(), formspec_ender_chest)
     end,
     on_secondary_use = function(itemstack, player, pointed_thing)
