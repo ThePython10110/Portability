@@ -85,4 +85,3 @@ minetest.register_craft({
         {"mcl_throwing:ender_pearl","mcl_throwing:ender_pearl","mcl_throwing:ender_pearl"}
     }
 })
-
