@@ -67,10 +67,10 @@ minetest.register_tool("portability:ender_chest", {
     inventory_image = ender_chest_texture,
     on_place = function(itemstack, player, pointed_thing)
         minetest.sound_play("mcl_chests_enderchest_open.ogg", {to_player = player:get_player_name()})
-        minetest.show_formspec(player, "portability:ender_chest_"..player:get_player_name(), formspec_ender_chest)
+        minetest.show_formspec(player:get_player_name(), "portability:ender_chest_"..player:get_player_name(), formspec_ender_chest)
     end,
     on_secondary_use = function(itemstack, player, pointed_thing)
-        minetest.show_formspec(player, "portability:ender_chest_"..player:get_player_name(), formspec_ender_chest)
+        minetest.show_formspec(player:get_player_name(), "portability:ender_chest_"..player:get_player_name(), formspec_ender_chest)
     end
 })
 
