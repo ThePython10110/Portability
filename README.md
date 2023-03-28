@@ -1,6 +1,7 @@
 # Portability
 A mod that adds portable things to MineClone (crafting table, ender chest, enchanting table? Teleportation device?)
 [GitHub repo](https://github.com/thepython10110/portability)
+[Forum post](https://forum.minetest.net/viewtopic.php?f=9&t=29330)
 
 I plan to add these items:
 - [x] Portable Crafting Table
@@ -33,3 +34,6 @@ player:get_wielded_item():get_name() == "portability:ender_chest" then return en
 ```
 This makes it so that if the player is holding a portable ender chest, it will skip that check. This will *not* affect anything else, and even if the mod is disabled or deleted, everything will be fine.
 The only effect I've found is this: if an ender chest is opened by a player holding an "unknown item" portable ender chest (in other words, if the mod is removed but someone had one in their inventory) and someone broke the ender chest, it would still be possible for the player to insert/remove items from the ender chest until they closed the formspec. Basically not a problem.
+
+![Crafting Table Recipe](screenshots/crafting_table_recipe.png)
+![Ender Chest Recipe](screenshots/ender_chest_recipe.png)
