@@ -1,0 +1,20 @@
+Portability: A mod for MineClone adding portable things
+Copyright (C) 2023 ThePython10110
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Create an issue at https://github.com/ThePython10110/Portability/issues if you have questions, feature requests, or bug reports.
+
+All images were taken from MineClone 2 and slightly modified, and are licensed under CC BY-SA 3.0.
+The Ender Chest sounds were also taken from MineClone 2 (originally from https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/resource-packs/1245112-snowsong-the-epic-sound-pack-sound-resource-pack, where the license can be found)

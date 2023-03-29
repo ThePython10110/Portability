@@ -8,9 +8,8 @@ I plan to add these items:
 - [x] Portable Crafting Table
 - [x] Portable Ender Chest (see warning below)
 - [x] Portable Enchanting Table (Upgradable by crafting with bookshelves, downgradable by crafting as well)
-- [ ] Maybe a teleportation device (similar to travelnet formspec on right-click, plus add/remove buttons)
 
-I was originally going to add things like portable furnaces, portable anvils, things like that... but after looking at the code for a backpack mod, I decided I don't know enough about Minetest (yet) to deal with detached inventories.
+I was originally going to add things like portable furnaces, portable anvils, things like that... but after looking at the code for a backpack mod, I decided I don't know enough about Minetest (yet) to deal with detached inventories.  I also considered adding a teleporter, then realized that the `personal_log` mod had MineClone support.
 
 ## WARNING
 MineClone checks whether you're near an ender chest every time you try to put things into one. This means that *normally*, portable ender chests will not let you insert/remove items unless there's an ender chest nearby. The only way to fix that is to go into MineClone's code and add a line. In your Minetest directory, open `games/mineclone2/mods/ITEMS/mcl_chests/init.lua` in a text editor. Around line 1060 (as of MineClone 0.82.0), there should be code that looks like this (you can also use the find tool and search for "`register_allow`"):
