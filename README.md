@@ -1,5 +1,5 @@
 # Portability
-A mod that adds portable things to MineClone (crafting table, ender chest, enchanting table? Teleportation device?)
+A mod that adds portable things to MineClone (crafting table, ender chest, enchanting table)
 [GitHub repo](https://github.com/thepython10110/portability)
 [Forum post](https://forum.minetest.net/viewtopic.php?f=9&t=29330)
 [ContentDB](https://content.minetest.net/thepython/portability)
